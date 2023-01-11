@@ -1,0 +1,17 @@
+<div>
+    <p>Send notification to the configured endpoint using HTTP/HTTPS protocol with <strong>POST</strong> method after Input step started, approved, aborted.</p>
+    <p>example request body as follow:</p>
+    <pre>
+{
+	"approver": "anonymous",                         // The one who approve or reject this input
+	"buildNumber": 45,                               // Job build number
+	"inputId": "Id",                                 // Input custom Id
+	"jenkinsUrl": "http://localhost:8090/jenkins/",  // The absolute URL of Jenkins
+	"jobFullName": "123",                            // Job full name
+	"jobUrl": "job/123/45/",                         // The URL of job, relative to the context root of Hudson
+	"result": "APPROVED",                            // Input result, can be PENDING, APPROVED, ABORTED
+	"submitter": null                                // Who can proceed this input
+}
+    </pre>
+    <p>NOTE: if `approver` is SYSTEM , that means jenkins user abort job manually other than input when input waiting for proceed</p>
+</div>

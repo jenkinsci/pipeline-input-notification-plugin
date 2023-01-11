@@ -1,0 +1,12 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:f="/lib/form">
+
+    <st:include page="input-notifier" class="${descriptor.clazz}"/>
+
+    <f:entry title="${%Http Endpoint}" field="httpEndpoint">
+        <f:textbox/>
+    </f:entry>
+    <f:entry title="Verify SSL" field="httpVerifySSL" name="httpVerifySSL">
+        <f:checkbox />
+    </f:entry>
+</j:jelly>
