@@ -1,4 +1,4 @@
-package org.jenkins.plugins.pipeline.input.models;
+package io.jenkins.plugins.pipeline.input.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

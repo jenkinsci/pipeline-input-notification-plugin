@@ -1,9 +1,9 @@
-package org.jenkins.plugins.pipeline.input.notifiers;
+package io.jenkins.plugins.pipeline.input.notifiers;
 
 import hudson.ExtensionPoint;
 import hudson.model.AbstractDescribableImpl;
 import hudson.model.Descriptor;
-import org.jenkins.plugins.pipeline.input.models.InputNotificationEvent;
+import io.jenkins.plugins.pipeline.input.models.InputNotificationEvent;
 import org.kohsuke.stapler.DataBoundSetter;
 
 import java.io.Serializable;

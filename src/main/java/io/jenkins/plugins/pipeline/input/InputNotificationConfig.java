@@ -1,9 +1,9 @@
-package org.jenkins.plugins.pipeline.input;
+package io.jenkins.plugins.pipeline.input;
 
 import hudson.Extension;
+import io.jenkins.plugins.pipeline.input.notifiers.InputNotifier;
 import jenkins.model.GlobalConfiguration;
 import net.sf.json.JSONObject;
-import org.jenkins.plugins.pipeline.input.notifiers.InputNotifier;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
 import org.kohsuke.stapler.StaplerRequest;

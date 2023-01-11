@@ -1,15 +1,15 @@
-package org.jenkins.plugins.pipeline.input.notifiers;
+package io.jenkins.plugins.pipeline.input.notifiers;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import hudson.Extension;
+import io.jenkins.plugins.pipeline.input.models.InputNotificationEvent;
 import jenkins.model.Jenkins;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import org.jenkins.plugins.pipeline.input.models.InputNotificationEvent;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
 
