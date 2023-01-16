@@ -30,7 +30,7 @@ public class HttpNotifier extends InputNotifier {
     private static final Logger LOGGER = Logger.getLogger(HttpNotifier.class.getName());
 
     private String httpEndpoint;
-    private boolean httpVerifySSL;
+    private boolean ignoreSSL;
 
     @DataBoundConstructor
     public HttpNotifier() {
@@ -47,17 +47,17 @@ public class HttpNotifier extends InputNotifier {
     }
 
     /**
-     * Gets whether to enable SSL verify.
+     * Gets whether to ignore SSL verify.
      *
-     * @return true if verify SSL is enabled
+     * @return true if ignore SSL is enabled
      */
-    public boolean getHttpVerifySSL() {
-        return httpVerifySSL;
+    public boolean getIgnoreSSL() {
+        return ignoreSSL;
     }
 
     @DataBoundSetter
-    public void setHttpVerifySSL(boolean httpVerifySSL) {
-        this.httpVerifySSL = httpVerifySSL;
+    public void setIgnoreSSL(boolean ignoreSSL) {
+        this.ignoreSSL = ignoreSSL;
     }
 
     @Override
@@ -69,7 +69,7 @@ public class HttpNotifier extends InputNotifier {
             .post(RequestBody.create(MediaType.parse("application/json"), body))
             .build();
 
-        try (Response resp = getHttpClient(!getHttpVerifySSL()).newCall(request).execute()){
+        try (Response resp = getHttpClient(getIgnoreSSL()).newCall(request).execute()){
             if (resp.isSuccessful()) {
                 LOGGER.log(Level.FINE, "Successfully sent data to {0}", getHttpEndpoint());
             } else {

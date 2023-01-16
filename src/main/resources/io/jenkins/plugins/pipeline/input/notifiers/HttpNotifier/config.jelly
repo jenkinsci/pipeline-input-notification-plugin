@@ -6,7 +6,7 @@
     <f:entry title="${%Http Endpoint}" field="httpEndpoint">
         <f:textbox/>
     </f:entry>
-    <f:entry title="Verify SSL" field="httpVerifySSL" name="httpVerifySSL">
+    <f:entry title="${%Do not verify SSL}" field="ignoreSSL" name="ignoreSSL">
         <f:checkbox default="false" />
     </f:entry>
 </j:jelly>
