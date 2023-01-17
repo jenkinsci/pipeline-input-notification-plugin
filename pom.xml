@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.40</version>
+        <version>4.52</version>
         <relativePath />
     </parent>
     <groupId>io.jenkins.plugins</groupId>
@@ -12,9 +12,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <properties>
-        <jenkins.version>2.332.4</jenkins.version>
-        <java.level>8</java.level>
-        <hpi.compatibleSinceVersion>1.0</hpi.compatibleSinceVersion>
+        <jenkins.version>2.361.4</jenkins.version>
     </properties>
     <name>Pipeline Input Step Notification Plugin</name>
     <description>Send notification after input started, approved, aborted</description>
@@ -47,8 +45,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.332.x</artifactId>
-                <version>1451.v15f1fdb_772a_f</version>
+                <artifactId>bom-2.361.x</artifactId>
+                <version>1763.v092b_8980a_f5e</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -63,14 +61,6 @@
                 <exclusion>
                     <groupId>com.squareup.okhttp3</groupId>
                     <artifactId>okhttp</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.osgi</groupId>
-                    <artifactId>org.osgi.core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>javax.annotation</groupId>
-                    <artifactId>javax.annotation-api</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
